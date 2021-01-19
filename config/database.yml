@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: article_development
+  database: web_dev_article_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: article_test
+  database: web_dev_article_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: article_production
+  database: web_dev_article_production
   username: article
   password: <%= ENV['ARTICLE_DATABASE_PASSWORD'] %>
