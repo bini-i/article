@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   get '/sign_up', to: 'users#new'
   get '/sign_in', to: 'sessions#new'
   post '/sign_in', to: 'sessions#create'
+  delete '/sign_in', to: 'sessions#destroy'
   resources :users, only: %i[create]
 end

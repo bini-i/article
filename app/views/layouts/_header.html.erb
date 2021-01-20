@@ -1,0 +1,8 @@
+<ul >
+    <% if user_signed_in? %>
+        <%= link_to 'Sign Out', sign_in_path, method: :delete %>
+    <% else %>
+        <%= link_to 'Sign In', sign_in_path %>
+        <%= link_to 'Sign Up', sign_up_path %>
+    <% end %>
+</ul>
