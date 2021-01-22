@@ -10,5 +10,8 @@ RSpec.describe Article, type: :model do
     it { should belong_to(:author) }
     it { should have_many(:votes) }
     it { should have_many(:voters).through(:votes) }
+
+    it { should have_many(:article_categories) }
+    it { should have_many(:categories).through(:article_categories) }
   end
 end
