@@ -1,0 +1,7 @@
+<%= @articles.each do |article| %>
+    <p>image</p>
+    <% if article.image.exists? %>
+        <%= image_tag article.image.url %>
+    <% end %>
+    <p>closing</p>
+<% end %>

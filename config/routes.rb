@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   delete '/sign_in', to: 'sessions#destroy'
   
   resources :users, only: %i[create]
+  resources :articles
 end
