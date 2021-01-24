@@ -1,32 +1,20 @@
-<h2>Sign In</h2>
-
-<%= form_with scope: :session, url: sign_in_path do |f| %>
-    <table>
-        <tr>
-            <td>
-                <%= f.label :name %>
-            </td>
-            <td>
-                <%= f.text_field :name %>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <%= f.label :password %>
-            </td>
-            <td>
-                <%= f.password_field :password %>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <%= f.label :password_confirmation %>
-            </td>
-            <td>
-                <%= f.password_field :password_confirmation %>
-            </td>
-        </tr>
-    </table>
-
-    <%= f.submit 'Sign In' %>
-<% end %>
+<section class="container-fluid">
+    <section class="row justify-content-center">
+        <section class="col-12 col-md-3 col-sm-6">
+            <h2 >Sign In</h2>
+            <%= form_with scope: :session, url: sign_in_path do |f| %>
+                <form class="row">
+                    <div class="form-group">
+                        <%= f.label :name %>
+                        <%= f.text_field :name, class: "form-control", placeHolder: "Enter Name" %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :password %>
+                        <%= f.password_field :password, class: "form-control", placeHolder: "Password" %>
+                    </div>
+                    <%= f.submit 'Sign In', class: "btn btn-primary" %>
+                </form>
+            <% end %>
+        </section>
+    </section>
+</section>

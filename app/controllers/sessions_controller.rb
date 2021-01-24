@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
             session[:id] = user.id
             redirect_back(fallback_location: sign_in_path)
         else
+            flash[:alert] = "Wrong name or password. Please try again."
             render 'new'
         end
     end

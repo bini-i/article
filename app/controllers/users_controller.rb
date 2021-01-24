@@ -9,7 +9,7 @@ class UsersController < ApplicationController
             flash[:notice] = "Account successfully created."
             redirect_to :root
         else
-            flash[:alert] = "Couldn't successfully create your account. Try again."
+            flash[:alert] = "Incorrect input. Please try again."
             render 'new'
         end
     end
