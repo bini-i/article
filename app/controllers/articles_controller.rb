@@ -6,17 +6,16 @@ class ArticlesController < ApplicationController
     end 
 
     def new
-        # byebug
         @article = Article.new
     end
 
     def create
         @article = Article.new(article_params)
-        # byebug
-        current_user.articles << @article 
+        category = Category.find(params[:category_id])
         if current_user.articles << @article
+            @article.categories << category
             flash[:notice] = "Article successfully created."
-            redirect_to articles_path
+            redirect_to categories_path
         else
             flash.now[:alert] = "Incorrect input. Please try again."
             render "new"

@@ -1,7 +1,7 @@
 <section class="container-fluid">
     <section class="row justify-content-center">
         <section class="col-12 col-md-3 col-sm-6">
-            <%= form_with model: @article, multipart: true do |f| %>
+            <%= form_with model: @article, url: category_articles_path, multipart: true do |f| %>
                 <form class="row">
                     <div class="form-group">
                         <%= f.label :title %>
