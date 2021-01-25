@@ -8,7 +8,8 @@ class SessionsController < ApplicationController
         user = User.find_by(name: params[:session][:name])
         if user && user.authenticate(params[:session][:password])
             session[:id] = user.id
-            redirect_back(fallback_location: sign_in_path)
+            flash[:notice] = "Successfully logged in."
+            redirect_to root_path
         else
             flash[:alert] = "Wrong name or password. Please try again."
             render 'new'
@@ -17,5 +18,7 @@ class SessionsController < ApplicationController
 
     def destroy
         session[:id] = nil
+        flash[:notice] = "You have logged out."
+        redirect_to sign_in_path
     end
 end

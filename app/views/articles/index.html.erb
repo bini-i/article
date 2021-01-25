@@ -1,7 +1,7 @@
-<%= @articles.each do |article| %>
-    <p>image</p>
-    <% if article.image.exists? %>
-        <%= image_tag article.image.url %>
-    <% end %>
-    <p>closing</p>
+
+<% if @articles.any? %>
+    <div class="card-deck articles">
+        <%= render @articles %>
+    </div>
 <% end %>
+

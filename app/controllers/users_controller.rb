@@ -7,6 +7,7 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         if @user.save
             flash[:notice] = "Account successfully created."
+            session[:id] = @user.id
             redirect_to :root
         else
             flash[:alert] = "Incorrect input. Please try again."
