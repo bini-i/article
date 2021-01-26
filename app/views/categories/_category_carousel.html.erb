@@ -1,8 +1,7 @@
-
-<div class="carousel-item">
-    <img src="..." alt="...">
-    <div class="carousel-caption d-none d-md-block">
-    <h5>...</h5>
-    <p>...</p>
+<div class="banner">
+    <%= image_tag popular_article.image.url, class: "img-fluid w-100 banner-img" %>
+    <div class="banner-desc mx-3">
+        <%= link_to popular_article.title, article_path(popular_article), class: "banner-title" %>
+        <p class="banner-text"><%= popular_article.text %></p>
     </div>
 </div>

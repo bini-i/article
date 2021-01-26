@@ -1,8 +1,7 @@
-<div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+<% if category.articles.any? %>
+    <div class="category">
+        <%= image_tag latest_article(category).image.url, class: "category-image" %>
+        <%= link_to category.name, category_path(category), class: "category-name ml-3" %>
+        <p class="category-text ml-3"><%= latest_article(category).title %></p>
     </div>
-</div>
+<% end %>

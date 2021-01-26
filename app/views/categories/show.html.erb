@@ -1,0 +1,6 @@
+<% if @articles.any? %>
+    <div class="articles d-sm-flex">
+        <%= render partial: 'articles/article', collection: @articles %>
+    </div>
+    <%= link_to "Create Article about ", new_category_article_path(@category) %>
+<% end %>
