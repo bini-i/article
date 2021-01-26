@@ -43,7 +43,7 @@ A list of commonly used resources that I find helpful is listed in the acknowled
 
 ## Live Demo
 
-[Live Demo Link](https://mv-ror-social-media.herokuapp.com/)
+[Live Demo Link](https://wild-style.herokuapp.com/)
 
 
 ## Getting Started
