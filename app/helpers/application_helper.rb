@@ -1,6 +1,6 @@
 module ApplicationHelper
     def popular_article
-        Article.where(id: Vote.group(:article_id).count(:user_id).max[0])
+        Article.where(id: Vote.group(:article_id).count(:user_id).max[0]).take
     end
 
     def latest_article(category)
