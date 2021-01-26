@@ -19,20 +19,29 @@ main {
                 .card-title {
                     color: #fa6000;
                     font-weight: bold;
-                    font-size: 1.5rem;
-                }
-                .card-text {
+                    font-size: 1.1rem;
                     text-overflow: ellipsis;
                     overflow: hidden;
-                    max-height: 70%;
+                    white-space: nowrap;
+                }
+                .card-text {
+                    font-size: 0.9rem;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    height: 70%;
                 }
                 .author {
                     display: inline;
 
                 }
                 .vote {
-                    display: inline;
-                    float: right;
+                    .vote-btn {
+                        display: inline;
+                    }
+
+                    .vote-count {
+                        display: inline;
+                    }
                 }
             }
         }

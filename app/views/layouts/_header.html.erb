@@ -10,16 +10,13 @@
           <a class="nav-link active" aria-current="page" href="<%= root_path %>">HOME</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<%=category_path(Category.find_by(name: "birds"))%>">BIRDS</a>
+          <a class="nav-link" href="<%=category_path(Category.first)%>">BIRDS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">CATS</a>
+          <a class="nav-link" href="<%=category_path(Category.second)%>">CATS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">FISH</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">FAVOURITE</a>
+          <a class="nav-link" href="<%=category_path(Category.third)%>">FISH</a>
         </li>
         <% if user_signed_in? %>
             <li class="nav-item ml-auto"><%= link_to current_user.name.upcase!, root_path, class: "nav-link" %></li>

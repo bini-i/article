@@ -15,7 +15,7 @@ class ArticlesController < ApplicationController
         if current_user.articles << @article
             @article.categories << category
             flash[:notice] = "Article successfully created."
-            redirect_to categories_path
+            redirect_to category_path(category)
         else
             flash.now[:alert] = "Incorrect input. Please try again."
             render "new"
