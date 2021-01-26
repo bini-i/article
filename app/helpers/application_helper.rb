@@ -10,4 +10,8 @@ module ApplicationHelper
     def latest_article(category)
         category.articles.order(created_at: :desc).first
     end
+
+    def get_vote(article)
+        current_user.votes.where(article_id: article.id).take
+    end
 end

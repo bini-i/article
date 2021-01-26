@@ -8,8 +8,10 @@ Rails.application.routes.draw do
   
   resources :users, only: %i[create]
   resources :categories do
-    resources :articles, shallow: true
+    resources :articles, only: [:index, :new, :create]
   end
-  
+  resources :articles, only: [:show, :edit, :update, :destroy] do
+    resources :votes, only: [:create, :destroy]
+  end
   root "categories#index"
 end
