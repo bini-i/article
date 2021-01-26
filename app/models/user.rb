@@ -1,23 +1,23 @@
 class User < ApplicationRecord
-    has_secure_password 
+  has_secure_password
 
-    validates :name, uniqueness: true
-    validates :name, presence: true
+  validates :name, uniqueness: true
+  validates :name, presence: true
 
-    has_many :articles, foreign_key: :author_id
+  has_many :articles, foreign_key: :author_id
 
-    has_many :votes
-    has_many :voted_articles, through: :votes, source: :article
+  has_many :votes
+  has_many :voted_articles, through: :votes, source: :article
 
-    def already_voted?(article)
-        voted_articles.include?(article) ? true : false
+  def already_voted?(article)
+    voted_articles.include?(article) ? true : false
+  end
+
+  def up_vote(article)
+    if already_voted?(article)
+      false
+    else
+      voted_articles << article
     end
-
-    def up_vote(article)
-        unless already_voted?(article)
-            voted_articles << article 
-        else
-            false
-        end
-    end
+  end
 end
