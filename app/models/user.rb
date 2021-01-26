@@ -8,4 +8,8 @@ class User < ApplicationRecord
 
     has_many :votes
     has_many :voted_articles, through: :votes, source: :article
+
+    def up_vote(article)
+        voted_articles << article
+    end
 end

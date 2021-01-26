@@ -24,7 +24,15 @@ main {
                 .card-text {
                     text-overflow: ellipsis;
                     overflow: hidden;
-                    height: 70%;
+                    max-height: 70%;
+                }
+                .author {
+                    display: inline;
+
+                }
+                .vote {
+                    display: inline;
+                    float: right;
                 }
             }
         }
