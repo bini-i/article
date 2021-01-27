@@ -7,7 +7,10 @@
       <h5 class="card-title"><%= article.title %></h5>
       <p class="card-text"><%= article.text %></p>
       <p class="card-text author"><small class="text-muted">By <%= article.author.name %></small></p>
-
+      
+      <% if article.author == current_user %>
+        <%= link_to 'Edit', edit_article_path(article), class: "btn-sm btn-primary" %>
+      <% end %>
       
       <% if user_signed_in? %>
         <div class= "vote float-right">
