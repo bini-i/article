@@ -10,7 +10,7 @@ require("channels")
 
 import 'jquery'
 import 'popper.js'
-import "bootstrap"
+// import "bootstrap"
 import "../stylesheets/application"
 
 document.addEventListener("turbolinks:load", () => {
