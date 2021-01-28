@@ -10,8 +10,7 @@ class Article < ApplicationRecord
   has_many :article_categories
   has_many :categories, through: :article_categories
 
-  has_attached_file :image, styles: { medium: '300x300>', thumb: '100x100>' }
-  validates_attachment_content_type :image, content_type: ['image/jpg', 'image/jpeg', 'image/png', 'image/gif']
+  has_one_attached :image
 
   def vote_count
     votes.count

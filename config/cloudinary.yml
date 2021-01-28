@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: bini
+  api_key: '943882157913594'
+  api_secret: TfnAX5NgVVlqzbC7gk1FX-0E3vA
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: bini
+  api_key: '943882157913594'
+  api_secret: TfnAX5NgVVlqzbC7gk1FX-0E3vA
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: bini
+  api_key: '943882157913594'
+  api_secret: TfnAX5NgVVlqzbC7gk1FX-0E3vA
+  enhance_image_tag: true
+  static_file_support: false
