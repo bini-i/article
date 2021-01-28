@@ -1,0 +1,22 @@
+<section class="container-fluid">
+    <section class="row justify-content-center">
+        <section class="col-12 col-md-3 col-sm-6">
+            <%= form_with model: @article, multipart: true do |f| %>
+                <form class="row">
+                    <div class="form-group">
+                        <%= f.label :title %>
+                        <%= f.text_field :title, class: "form-control" %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :text %>
+                        <%= f.text_area :text, class: "form-control" %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.file_field :image, class: "form-control" %>
+                    </div>
+                    <%= f.submit 'Create Article', class: "btn btn-primary"%>
+                </form>
+            <% end %>
+        </section>
+    </section>
+</section>

@@ -7,10 +7,8 @@ Rails.application.routes.draw do
   delete '/sign_in', to: 'sessions#destroy'
   
   resources :users, only: %i[create]
-  resources :categories do
-    resources :articles, only: [:index, :new, :create]
-  end
-  resources :articles, only: [:show, :edit, :update, :destroy] do
+  resources :categories
+  resources :articles do
     resources :votes, only: [:create, :destroy]
   end
   root "categories#index"
