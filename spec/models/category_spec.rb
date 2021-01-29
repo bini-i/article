@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Category, type: :model do
   describe 'validations' do
-    subject { User.new(name: 'user1') }
+    subject { Category.new(name: 'user1') }
     it { should validate_presence_of(:name) }
     it { should validate_uniqueness_of(:name) }
   end
