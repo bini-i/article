@@ -9,15 +9,15 @@
         <li class="nav-item ml-auto">
           <a class="nav-link active" aria-current="page" href="<%= root_path %>">HOME</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<%=category_path(Category.first)%>">BIRDS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<%=category_path(Category.second)%>">CATS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<%=category_path(Category.third)%>">FISH</a>
-        </li>
+
+        
+        <% if Category.any? %>
+          <% Category.first(3).each do |category| %>  
+            <li class="nav-item">
+              <a class="nav-link" href="<%=category_path(category)%>"><%= category.name.upcase %></a>
+            </li>
+          <% end %>
+        <% end %>
 
         <%= link_to new_article_path, class: "btn btn-sm btn-primary ml-auto" do %>  
           <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
