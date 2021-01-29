@@ -1,27 +1,21 @@
-<section class="container-fluid">
-    <section class="row justify-content-center">
-        <section class="col-12 col-md-5 col-sm-6">
-            <%= form_with model: @article do |f| %>
-                <form class="row">
-                    <div class="form-group">
-                        <%= f.label :title, "Title" %>
-                        <%= f.text_field :title, class: "form-control" %>
-                    </div>
-                    <div class="form-group">
-                        <%= f.label :text, "Text" %>
-                        <%= f.text_area :text, class: "form-control" %>
-                    </div>
-                    <div class="form-group">
-                        <%= f.label :category, "Choose Category" %>
-                        <%= collection_select(:article, :categories, Category.all, :id, :name, {}, {class: "form-control"})%>
-                    </div>
-                    <div class="form-group">
-                        <%= f.label :image, "Upload image" %>
-                        <%= f.file_field :image, class: "form-control-file" %>
-                    </div>
-                    <%= f.submit 'Create Article', class: "btn btn-primary"%>
-                </form>
-            <% end %>
-        </section>
-    </section>
-</section>
+<%= form_with model: @article do |f| %>
+    <form class="row">
+        <div class="form-group">
+            <%= f.label :title, "Title" %>
+            <%= f.text_field :title, class: "form-control" %>
+        </div>
+        <div class="form-group">
+            <%= f.label :text, "Text" %>
+            <%= f.text_area :text, class: "form-control" %>
+        </div>
+        <div class="form-group">
+            <%= f.label :category, "Choose Category" %>
+            <%= collection_select(:article, :categories, Category.all, :id, :name, {}, {class: "form-control"})%>
+        </div>
+        <div class="form-group">
+            <%= f.label :image, "Upload image" %>
+            <%= f.file_field :image, class: "form-control-file", direct_upload: true %>
+        </div>
+        <%= f.submit class: "btn btn-primary"%>
+    </form>
+<% end %>

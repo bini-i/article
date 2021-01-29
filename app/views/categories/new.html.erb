@@ -1,0 +1,15 @@
+<section class="container-fluid">
+    <section class="row justify-content-center">
+        <section class="col-12 col-md-5 col-sm-6">
+            <%= form_with model: @category do |f| %>
+                <form class="row">
+                    <div class="form-group">
+                        <%= f.label :name, "Name" %>
+                        <%= f.text_field :name, class: "form-control" %>
+                    </div>
+                    <%= f.submit "Create category",  class: "btn btn-primary"%>
+                </form>
+            <% end %>
+        </section>
+    </section>
+</section>
