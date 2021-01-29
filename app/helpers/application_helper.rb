@@ -14,12 +14,12 @@ module ApplicationHelper
   end
 
   def display_vote_button(article)
-    if user_signed_in?
-      if current_user.already_voted?(article)
-        render "articles/vote", article: article, vote: "down", method: :delete, path: :article_vote_path
-      else
-        render "articles/vote", article: article, vote: "up", method: :post, path: :article_votes_path
-      end
+    return unless user_signed_in?
+
+    if current_user.already_voted?(article)
+      render 'articles/vote', article: article, vote: 'down', method: :delete, path: :article_vote_path
+    else
+      render 'articles/vote', article: article, vote: 'up', method: :post, path: :article_votes_path
     end
   end
 end

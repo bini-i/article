@@ -31,7 +31,7 @@ gem 'bootsnap', '>= 1.4.2'
 # Paperclip
 # gem 'paperclip'
 
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
 
 gem 'cloudinary'
 

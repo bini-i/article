@@ -12,7 +12,7 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     category = Category.find(params[:article][:categories])
-    if (current_user.articles << @article && @article.categories << category)
+    if current_user.articles << @article && @article.categories << category
       flash[:notice] = 'Article successfully created.'
       redirect_to category_path(category)
     else
