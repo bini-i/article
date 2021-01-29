@@ -7,7 +7,7 @@ class Article < ApplicationRecord
   has_many :votes, dependent: :destroy
   has_many :voters, through: :votes, source: :user
 
-  has_many :article_categories
+  has_many :article_categories, dependent: :destroy
   has_many :categories, through: :article_categories
 
   has_one_attached :image, dependent: :destroy

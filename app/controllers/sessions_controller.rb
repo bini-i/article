@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       flash[:notice] = 'Successfully logged in.'
       redirect_to root_path
     else
-      flash[:alert] = 'Wrong name or password. Please try again.'
+      flash.now[:alert] = 'Wrong name or password. Please try again.'
       render 'new'
     end
   end
