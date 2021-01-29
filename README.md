@@ -6,7 +6,7 @@
 
 ## About the Project
 
-This project is a Wildstyle articles app where articles with a theme of wild animals are grouped under different categories and:
+This project is a rails app where articles with a theme of wild animals and wildlife are grouped under different categories and an authenticated user has an option to create, view, edit and delete articles:
 
 As a guest user:
 - Create an account/log in
