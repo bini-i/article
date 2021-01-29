@@ -1,8 +1,3 @@
-<div class="jumbotron p-2 text-center">
-  <p class="lead my-1">
-    <%= link_to "Create Article about " + @category.name, new_category_article_path(@category), class: "btn btn-primary btn-md font-weight-bold" %>
-  </p>
-</div>
 <% if @articles.any? %>
     <div class="articles d-sm-flex flex-wrap">
         <%= render partial: 'articles/article', collection: @articles %>
