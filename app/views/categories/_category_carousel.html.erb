@@ -1,10 +1,8 @@
-<% if Article.any? %>
-    <div class="banner">
-        <%= image_tag popular_article.image, class: "img-fluid w-100 banner-img" %>
-        <div class="banner-desc mx-3">
-            <%= link_to popular_article.title, article_path(popular_article), class: "banner-title" %>
-            <p class="banner-text"><%= popular_article.text %></p>
-        </div>
+<div class="banner">
+    <%= image_tag popular_article.image, class: "img-fluid w-100 banner-img" %>
+    <div class="banner-desc mx-3">
+        <%= link_to popular_article.title, article_path(popular_article), class: "banner-title" %>
+        <p class="banner-text"><%= popular_article.text %></p>
     </div>
-<% end %>
+</div>
 

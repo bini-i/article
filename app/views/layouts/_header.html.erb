@@ -23,7 +23,7 @@
         <% end %>
 
         <% if user_signed_in? %>
-            <li class="nav-item"><%= link_to current_user.name.upcase!, root_path, class: "nav-link text-underline" %></li>
+            <li class="nav-item"><%= link_to current_user.user_name.upcase!, root_path, class: "nav-link text-underline" %></li>
             <li class="nav-item"><%= link_to 'SIGN OUT', sign_in_path, method: :delete, class: "nav-link" %></li>
         <% else %>
             <li class="nav-item"> <%= link_to 'LOG IN', sign_in_path, class: "nav-link" %> </li>

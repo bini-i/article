@@ -1,7 +1,5 @@
-<% if category.articles.any? %>
-    <div class="category">
-        <%= image_tag latest_article(category).image, class: "category-image" %>
-        <%= link_to category.name, category_path(category), class: "category-name ml-3" %>
-        <p class="category-text ml-3"><%= latest_article(category).title %></p>
-    </div>
-<% end %>
+<div class="category">
+    <%= image_tag latest_article(category).image, class: "category-image" %>
+    <%= link_to category.name, category_path(category), class: "category-name ml-3" %>
+    <p class="category-text ml-3"><%= latest_article(category).title %></p>
+</div>

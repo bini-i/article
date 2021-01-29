@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   def index
-    @categories = Category.all.order(priority: :desc)
+    @categories = Category.joins(:article_categories).order(priority: :desc)
   end
 
   def show
