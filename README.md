@@ -6,17 +6,17 @@
 
 ## About the Project
 
-This project is Wildstyle articles app where articles with a theme of wild animals are grouped under different categories and:
+This project is a Wildstyle articles app where articles with a theme of wild animals are grouped under different categories and:
 
 As a guest user:
-- Create account/log in
-- See Home page and Category page 
+- Create an account/log in
+- See Home page and category page 
 
 As a logged-in user:
 - Create articles.
 - Upvote articles.
 
-A list of commonly used resources that I find helpful is listed in the acknowledgments.
+A list of commonly used resources that I find helpful is listed in the acknowledgements.
 
 
 ## Table of Contents
@@ -48,7 +48,7 @@ A list of commonly used resources that I find helpful is listed in the acknowled
 
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
+### To get a local copy up and running follow these simple example steps.
 
 1. On the project GitHub page, navigate to the main page of the repository.
 2. Under the repository name, locate and click on a green button named `Code`. 
@@ -59,6 +59,25 @@ To get a local copy up and running follow these simple example steps.
 e.g. $ git clone https://github.com/yourUsername/yourProjectName 
 7. Press Enter. Your local copy will be created. 
 
+### To view the app in your browser
+1. Open your terminal and navigate to the projects folder.
+3. Make sure you have ruby installed on your local machine.
+2. run the following commands
+```
+bundle install
+rails db: migrate
+rails server
+```
+3. Open your browser and go to
+```
+http://localhost:3000/
+```
+### To run the tests
+1. Open your terminal and navigate to the projects folder.
+2. run the following command.
+```
+bundle exec rspec
+```
 
 ## Authors
 
@@ -91,6 +110,7 @@ This project is [MIT](./LICENSE) licensed.
 
 
 ## Acknowledgements
+* The project's UI and styling is based on the design template made by [Nelson Sakwa](https://www.behance.net/sakwadesignstudio)
 * [rails guides](https://guides.rubyonrails.org/)
 * [bootsrap](https://getbootstrap.com/)
 * [rspec rails gem](https://github.com/rspec/rspec-rails)
