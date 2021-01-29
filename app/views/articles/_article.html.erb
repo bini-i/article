@@ -1,6 +1,6 @@
 <div class="article d-sm-flex">
   <div class="article-img">
-    <%= image_tag article.image%>
+    <%= image_tag(article.image)if article.image.attached? %>
   </div>
   <div class="card"">
     <div class="card-body">

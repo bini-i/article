@@ -29,7 +29,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>= 1.4.2'
 
 # Paperclip
-# gem 'paperclip'
+gem 'paperclip'
 
 gem 'font-awesome-rails'
 
