@@ -3,5 +3,4 @@
     <%= link_to category.name, category_path(category), class: "category-name ml-3" %>
     <span class="badge badge-light priority mr-3"><%= category.priority %></span>
     <p class="category-text ml-3"><%= latest_article(category).title %></p>
-    <%= display_vote_button(latest_article(category)) %>
 </div>

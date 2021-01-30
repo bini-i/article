@@ -29,6 +29,17 @@ main {
         white-space: nowrap;
       }
     }
+
+    .vote {
+      position: absolute;
+      bottom: 35px;
+      right: 20px;
+      margin-bottom: 16px;
+
+      p {
+        display: inline;
+      }
+    }
   }
 
   .categories {
@@ -70,17 +81,6 @@ main {
         bottom: 5px;
         left: 0;
         color: white;
-      }
-
-      .vote {
-        position: absolute;
-        bottom: 5px;
-        right: 5px;
-        margin-bottom: 16px;
-
-        p {
-          display: inline;
-        }
       }
     }
   }
