@@ -1,0 +1,17 @@
+@import "custom";
+@import "~bootstrap/scss/bootstrap";
+@import "nav";
+@import "category";
+@import "article";
+
+.text-underline-hover {
+  text-decoration: none;
+}
+
+.text-underline-hover:hover {
+  text-decoration: underline;
+}
+
+.text-underline {
+  text-decoration: underline;
+}

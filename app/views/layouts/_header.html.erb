@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white h-75">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="<%= root_path %>">WildStyle<span class="dot">•</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav  flex-grow-1">
+        <li class="nav-item ml-lg-auto">
+          <a class="nav-link active" aria-current="page" href="<%= root_path %>">HOME</a>
+        </li>
+        
+        <% if Category.any? %>
+          <% Category.first(3).each do |category| %>  
+            <li class="nav-item">
+              <a class="nav-link" href="<%=category_path(category)%>"><%= category.name.upcase %></a>
+            </li>
+          <% end %>
+        <% end %>
+
+        <%= link_to new_article_path, class: "btn btn-sm btn-primary ml-lg-auto pencil" do %>  
+          <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        <% end %>
+
+        <% if user_signed_in? %>
+            <li class="nav-item"><%= link_to current_user.user_name.upcase!, root_path, class: "nav-link text-underline" %></li>
+            <li class="nav-item"><%= link_to 'SIGN OUT', sign_in_path, method: :delete, class: "nav-link" %></li>
+        <% else %>
+            <li class="nav-item"> <%= link_to 'LOG IN', sign_in_path, class: "nav-link" %> </li>
+            <div class="nav-item"><div class="nav-link px-0">|</div></div>
+            <li class="nav-item"> <%= link_to 'REGISTER', sign_up_path, class: "nav-link" %> </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>

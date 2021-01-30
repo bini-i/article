@@ -1,0 +1,6 @@
+<div class= "vote float-right">
+    <%= link_to (method == :post ? article_votes_path(article) : article_vote_path(article, get_vote(article))), method: method, class: "vote-btn" do %>
+        <i class="fa fa-thumbs-<%=vote%>" aria-hidden="true"></i>
+    <% end %>
+    <p class="vote-count text-primary"><%= article.vote_count %></p>
+</div>

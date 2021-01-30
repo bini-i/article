@@ -1,0 +1,7 @@
+<% if @articles.any? %>
+    <div class="articles d-sm-flex flex-wrap">
+        <%= render partial: 'articles/article', collection: @articles %>
+    </div>
+<% end %>
+
+

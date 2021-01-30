@@ -1,0 +1,87 @@
+main {
+  .banner {
+    position: relative;
+    background: black;
+
+    .banner-img {
+      object-fit: cover;
+      height: 445px;
+      opacity: 0.4;
+    }
+
+    .banner-desc {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      right: 0;
+
+      .banner-title {
+        color: #fa6000;
+        font-weight: bold;
+        font-size: 1.1rem;
+        text-decoration: none;
+      }
+
+      .banner-text {
+        color: white;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+
+    .vote {
+      position: absolute;
+      bottom: 35px;
+      right: 20px;
+      margin-bottom: 16px;
+
+      p {
+        display: inline;
+      }
+    }
+  }
+
+  .categories {
+    font-weight: bold;
+    color: white;
+
+    .category {
+      position: relative;
+      background: black;
+      flex: 0 1 25%;
+      height: 215px;
+
+      .category-image {
+        width: 100%;
+        height: 100%;
+        opacity: 0.6;
+        object-fit: cover;
+      }
+
+      .category-name {
+        color: white;
+        font-size: 1.1rem;
+        font-weight: bold;
+        text-decoration: none;
+        position: absolute;
+        top: 15px;
+        left: 0;
+        border-bottom: solid 2.5px #fcfc03;
+      }
+
+      .priority {
+        position: absolute;
+        top: 15px;
+        right: 0;
+      }
+
+      .category-text {
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        color: white;
+      }
+    }
+  }
+}
