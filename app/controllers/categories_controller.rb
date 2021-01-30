@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   def index
-    @categories = Category.joins(:article_categories).order(priority: :desc)
+    @categories = Category.joins(:article_categories).order(priority: :desc).distinct
   end
 
   def show
@@ -24,6 +24,6 @@ class CategoriesController < ApplicationController
   end
 
   def category_params
-    params.require(:category).permit(:name)
+    params.require(:category).permit(:name, :priority)
   end
 end
